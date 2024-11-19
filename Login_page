@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home UI</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+}
+.login-container {
+    margin-left:0px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    height:100%;
+}
+.login-container h2 {
+    text-align:center;
+    margin-bottom: 20px;
+    color: #333;
+}
+.login-container input {
+    width: 90%;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 0px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.login-container button {
+    width: 100%;
+    margin-top:20px;
+    padding: 10px;
+    background-color: #6A42C2;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+
+
+}
+.login-container button:hover {
+    background-color: #4335A7;
+    color:#fff;
+}
+.option-1{
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    width:90%;
+    height:50px;
+    font-size: 16px;
+    box-shadow: #333;
+    background-color:white;
+    border-radius:50px;
+    border:2px solid #f0f2f5;
+    
+}
+.option-1 img{
+    height: 20px;
+    width:20px;
+    
+}
+.option-2{
+    margin-top:20px;
+    margin-bottom:20px;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    width:90%;
+    height:50px;
+    font-size: 16px;
+    box-shadow: #333;
+    background-color:white;
+    border-radius:50px;
+    border:2px solid #f0f2f5;
+    
+}
+.option-2 img{
+    height: 30px;
+    width:30px;
+    
+}
+.or-opt{
+    display:flex;
+   justify-content: center;
+   align-items: center;
+}
+hr{
+    height:1px;
+    width:90px;
+}
+.login-details{
+    margin-top:20vh;
+    
+}
+</style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-details">
+            <h2>Login</h2>
+            <div class="option-1"><img src="Google_icon-icons.com_66793.png" alt="Google logo">Sign In with Google</div>
+            <div class="option-2"><img src="ICONS_FACEBOOK.png" alt="Google logo">Sign In with Facebook</div>
+            <div class="or-opt">
+                <hr><p>or Sign in with E-mail</p><hr>
+            </div>
+            
+            <form>
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+     
+    </div>
+</body>
+</html>
