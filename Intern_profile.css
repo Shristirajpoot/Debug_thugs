@@ -1,0 +1,104 @@
+/* profile.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .profile-container {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 90%;
+    padding: 20px;
+  }
+  
+  .profile-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #6c63ff;
+    margin-bottom: 15px;
+  }
+  
+  .intern-name {
+    font-size: 24px;
+    color: rgb(49, 6, 49);
+    margin: 10px 0;
+  }
+  
+  .intern-title {
+    font-size: 18px;
+    color: #6c63ff;
+  }
+  
+  .profile-details {
+    margin-bottom: 20px;
+  }
+  
+  .profile-details h2 {
+    font-size: 22px;
+    color: #6c63ff;
+    border-bottom: 2px solid #6c63ff;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .info-grid :hover{
+    background: linear-gradient(112.5deg, rgb(95, 10, 135) 11.4%, rgb(164, 80, 139) 60.2%);
+  }
+  .info-item {
+    background: #f9f9ff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+
+  .info-item h3 {
+    font-size: 16px;
+    color: rgb(49, 6, 49);
+    margin-bottom: 8px;
+  }
+  
+  .info-item p {
+    font-size: 14px;
+    color: #180161;
+  }
+  
+  .profile-actions {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .action-btn {
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  .action-btn:hover {
+    background-color: #5a54d2;
+  }
+  
