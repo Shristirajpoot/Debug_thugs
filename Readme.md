@@ -1,149 +1,129 @@
-Internship Platform (Frontend & Backend)
-This repository contains both the Frontend and Backend of the Internship Platform. The platform is designed to manage internships, mentor profiles, and user authentication with role-based access (interns, mentors, admins).
+# 🧑‍💼 Internship Platform – Connect, Learn & Grow! 🌱  
+> A full-stack role-based internship management system built with ❤️ using Node.js, MongoDB, HTML/CSS, and JavaScript.
 
-Frontend: A responsive web application built with React and TailwindCSS.
-Backend: A RESTful API built using Node.js, Express.js, and MongoDB.
-Features
-Frontend
-Responsive UI: Built using React and styled with TailwindCSS.
-User Authentication: Login, Register, and role-based access to different views (intern, mentor, admin).
-Internship Profiles: Interns can view and create internship profiles.
-Mentor Profiles: Mentors can create and update their profiles.
-Interactive UI: Includes forms, buttons, and modals to interact with the backend.
-Backend
-User Authentication: Register, login, and JWT-based secure authentication.
-Profile Management: Interns and mentors can manage their profiles.
-Role-Based Access Control: Different access for admin, mentor, and intern roles.
-MongoDB Integration: Data storage for users, internships, and mentor profiles.
-Technologies Used
-Frontend:
-React: For building the user interface.
-TailwindCSS: For styling the application.
-Axios: For making HTTP requests to the backend API.
-Backend:
-Node.js: JavaScript runtime for the server.
-Express.js: Web framework for building RESTful APIs.
-MongoDB: NoSQL database for storing user data, internship, and mentor profiles.
-JWT: JSON Web Tokens for secure user authentication.
-bcrypt.js: For hashing passwords.
-Setup Instructions
-1. Clone the repository
-bash
-Copy code
-git clone https://github.com/yourusername/internship-platform.git
-cd internship-platform
-2. Backend Setup
-Navigate to the backend folder
-bash
-Copy code
-cd backend
-Install Backend Dependencies
-Make sure Node.js is installed, then install the required packages.
+![GitHub Repo stars](https://img.shields.io/github/stars/Shristirajpoot/Debug_thugs?style=social)
+![GitHub last commit](https://img.shields.io/github/last-commit/Shristirajpoot/Debug_thugs?color=brightgreen)
+![Built with](https://img.shields.io/badge/Built%20with-Node.js%20%2B%20MongoDB-blue)
 
-bash
-Copy code
+---
+
+
+## 📌 Overview
+
+The **Internship Platform** empowers interns and mentors to connect, manage profiles, and collaborate through a unified portal. It supports **authentication**, **role-based access**, **profile creation**, and more.
+
+This project includes:
+
+- 🖥️ A responsive frontend built with **HTML/CSS/JS**
+- 🔧 A backend server using **Node.js, Express.js, and MongoDB**
+- 🔐 Authentication with **JWT & bcrypt**
+- 📁 Organized file structure for ease of use
+
+---
+
+## ✨ Features
+
+### 👨‍🎓 Intern & 👩‍🏫 Mentor
+- Profile creation & editing
+- View assigned mentors or interns
+- Dashboard with role-specific content
+
+### 🔐 Authentication
+- Register/Login functionality
+- JWT-based session management
+- Secure password hashing with bcrypt
+
+### ⚙️ Admin Functionality (Planned)
+- User management
+- Internship assignments
+- Analytics dashboard
+
+---
+
+## 🧩 Tech Stack
+
+| Frontend       | Backend            | Database | Auth    | Tools          |
+|----------------|--------------------|----------|---------|----------------|
+| HTML, CSS, JS  | Node.js, Express.js| MongoDB  | JWT     | Axios, bcrypt  |
+
+---
+
+## 📁 Project Structure
+
+
+```plaintext
+Internship-Platform/
+├── Login_page/               # Login page
+├── Intern_profile.html       # Intern dashboard
+├── Mentor_details.html       # Mentor dashboard
+├── index.html                # Landing page
+├── form.html / form.css / form.js  # Profile creation and styling
+├── Server.js                 # Node.js backend entry
+├── auth.js                   # JWT-based middleware
+├── connection.js             # MongoDB connection config
+├── User.js                   # Mongoose schema
+├── login.js / Profile.js     # Frontend scripts
+├── assets/                   # WebP and PNG images
+```
+
+
+## 🚀 Getting Started
+### 🛠️ Backend Setup
+```bash
+
 npm install
-Setup Environment Variables
-Create a .env file in the backend directory and add the following variables:
+```
+Create a .env file and add:
 
-plaintext
-Copy code
-MONGO_URI=your_mongodb_connection_string
+```env
+MONGO_URI=your_mongo_uri
 JWT_SECRET=your_jwt_secret
 PORT=5000
-MONGO_URI: Your MongoDB connection string (from MongoDB Atlas or local MongoDB instance).
-JWT_SECRET: Secret key used for JWT token signing and verification.
-PORT: The port on which the backend will run (e.g., 5000).
-Start the Backend Server
-bash
-Copy code
+```
+Then start the server:
+
+```bash
 npm start
-The backend will be running on http://localhost:5000.
+```
+## 🌐 Frontend Access
+Just open the HTML files in a browser (like index.html, Login_page, Intern_profile.html, etc.). You can enhance with React/TailwindCSS in the future.
 
-3. Frontend Setup
-Navigate to the frontend folder
-bash
-Copy code
-cd frontend
-Install Frontend Dependencies
-Make sure Node.js is installed, then install the required packages.
+## 🔗 API Endpoints
 
-bash
-Copy code
-npm install
-Set up Axios Configuration
-You might need to configure Axios in the frontend to point to the correct backend URL. This can be done in src/utils/axios.js.
+### Auth
+- POST /api/auth/register: Register user
 
-javascript
-Copy code
-import axios from 'axios';
+- POST /api/auth/login: Login user
 
-export const axiosInstance = axios.create({
-  baseURL: 'http://localhost:5000/api',
-});
-Start the Frontend Server
-bash
-Copy code
-npm start
-The frontend will be running on http://localhost:3000.
+### Profile
+- GET /api/profile/me: Get current user profile
 
-API Endpoints
-User Authentication
-POST /api/auth/register:
+Note: Send Authorization: Bearer <JWT> in header
+## 🧰 Tech Stack
+- 🔧 Backend: Node.js, Express.js, MongoDB
 
-Registers a new user.
-Request Body: { name, email, password, role }
-Response: 201 status with user details.
-POST /api/auth/login:
+- 🔐 Authentication: JWT, bcrypt.js
 
-Logs in a user and returns a JWT token.
-Request Body: { email, password }
-Response: 200 status with JWT token.
-User Profile
-GET /api/profile/me:
-Fetches the profile of the currently logged-in user.
-Authorization: Bearer token required in the Authorization header.
-Response: 200 status with user profile details.
-Project Structure
-Frontend
-php
-Copy code
-frontend/
-├── public/
-│   ├── index.html
-├── src/
-│   ├── components/          # Reusable components
-│   ├── pages/               # Page components (Login, Dashboard, Profile)
-│   ├── utils/               # Axios and other utility functions
-│   ├── App.js               # Main React component
-│   ├── index.js             # React entry point
-└── tailwind.config.js       # TailwindCSS configuration
-Backend
-bash
-Copy code
-backend/
-├── config/
-│   ├── db.js                # MongoDB connection
-│   ├── passport.js          # JWT Passport configuration
-├── middleware/
-│   ├── auth.js              # JWT authentication middleware
-├── models/
-│   ├── User.js              # User model schema
-├── routes/
-│   ├── auth.js              # Authentication routes
-│   ├── profile.js           # Profile routes
-├── server.js                # Entry point for the server
-└── .env                     # Environment variables
-Future Features
-Mentorship Matching: Add an algorithm to match mentors with interns based on skills and interests.
-Real-time Chat: Integrate Socket.IO to provide messaging functionality between interns and mentors.
-Payment Integration: Add support for payment processing using services like Stripe or PayPal.
-Data Analytics: Implement features to analyze user behavior and provide insights.
-Contribution
-Fork the repository.
-Clone your fork.
-Create a new branch for your changes.
-Implement your feature or bug fix.
-Create a pull request for review.
-License
-This project is licensed under the MIT License - see the LICENSE file for details
+- 🌐 Frontend: HTML, CSS, JavaScript
+
+- 📦 Database: MongoDB with Mongoose
+
+## 🛠️ Future Features
+- 🤝 Mentorship Matching Algorithm
+
+- 💬 Real-time Chat using Socket.IO
+
+- 💳 Payment Integration with Stripe/PayPal
+
+- 📊 Data Analytics Dashboard
+
+
+## 👩‍💻 Author
+### Shristi Rajpoot
+- 📧 Email: shristirajpoot369@gmail.com
+- 🔗 GitHub: @Shristirajpoot
+
+## 📄 License
+This project is licensed under the MIT License.
+
+### 🌟 If you liked this project, consider starring the repo and sharing it!
